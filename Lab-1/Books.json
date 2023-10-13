@@ -1,6 +1,5 @@
 ﻿{
   "name": "Library",
-  "file": "Books.csv",
   "columns": [
     {
       "name": "id",
