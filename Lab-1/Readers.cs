@@ -6,7 +6,20 @@ using System.Threading.Tasks;
 
 namespace Lab
 {
-    internal class Readers
+    class Reader
     {
+        public uint Id;
+
+        public string FullName;
+
+        public uint ReaderTicket;
+
+        public Dictionary<uint, DateTime> DateCapture;
+
+        public Dictionary<uint, DateTime> DateReturn;
+        public string ToString()
+        {
+            return Id + FullName + ReaderTicket + DateCapture.ToList()[0] + DateReturn;
+        }
     }
 }

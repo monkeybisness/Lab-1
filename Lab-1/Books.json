@@ -1,5 +1,6 @@
 ﻿{
   "name": "Library",
+  "file": "Books.csv",
   "columns": [
     {
       "name": "id",
@@ -28,7 +29,7 @@
     },
     {
       "name": "shelfNumber",
-      "type": "bool",
+      "type": "int",
       "isPrimary": false
     }
   ]

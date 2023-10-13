@@ -1,5 +1,4 @@
 ﻿using System.Globalization;
-using System.Reflection.PortableExecutable;
 
 namespace Lab
 {
@@ -7,9 +6,49 @@ namespace Lab
     {
         CultureInfo cultureInfo = new CultureInfo("ru-RU", false);
 
-
         public static void Main(string[] args)
-        { 
+        {
+            List<Reader> readers = new List<Reader>
+            {
+                new Reader
+                {
+                    Id = 1,
+
+                    FullName = "Андреев Андрей Андреевич",
+
+                    ReaderTicket = 1,
+
+                    DateCapture = new Dictionary<uint, DateTime> { { 2, new DateTime(2011, 11, 11) } },
+
+                    DateReturn = new Dictionary<uint, DateTime>{ { 2, new DateTime(2022, 12, 12) } }
+                },
+
+                new Reader
+                {
+                    Id= 2,
+
+                    FullName = "Иванов Иван Иванович",
+
+                    ReaderTicket = 2,
+
+                    DateCapture = new Dictionary<uint, DateTime>{ { 1, new DateTime(2023, 03, 27) } }
+                },
+
+                new Reader
+                {
+                    Id = 3,
+
+                    FullName = "Богданов Богдан Богданович",
+
+                    ReaderTicket = 3,
+
+                    DateCapture = new Dictionary<uint, DateTime>{ { 3, new DateTime(2022, 11, 29) } },
+
+                    DateReturn = new Dictionary<uint, DateTime>{ { 3, new DateTime(2023, 02, 24) } }
+                },
+
+            };
+
             List<Book> books = new List<Book>
             {
                 new Book
@@ -31,11 +70,11 @@ namespace Lab
                 {
                     Id = 2,
 
-                    Author = "Толстой Л. Н.",
+                    Author = "Лермонтов М. Ю.",
 
-                    Title = "Анна Каренина",
+                    Title = "Герой нашего времени",
 
-                    PublicationYear = 1878,
+                    PublicationYear = 1840,
 
                     CabinetNumber = 1,
 
@@ -46,11 +85,11 @@ namespace Lab
                 {
                     Id = 3,
 
-                    Author = "Толстой Л. Н.",
+                    Author = "Гоголь Н. В.",
 
-                    Title = "Казаки",
+                    Title = "Мёртвые души",
 
-                    PublicationYear = 1863,
+                    PublicationYear = 1842,
 
                     CabinetNumber = 1,
 
@@ -58,6 +97,14 @@ namespace Lab
                 },
 
             };
+            foreach (Book book in books)
+            {
+                Console.WriteLine(book.ToString());
+            }
+            foreach (Reader reader in readers)
+            {
+                Console.WriteLine(reader.ToString());
+            }
         }
     }
 }

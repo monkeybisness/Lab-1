@@ -1,7 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Runtime.CompilerServices;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -17,9 +16,14 @@ namespace Lab
 
         public uint PublicationYear;
 
-        public ushort CabinetNumber;
+        public uint CabinetNumber;
 
-        public byte ShelfNumber;
+        public uint ShelfNumber;
+
+        public string ToString()
+        {
+            return Id + Author + Title + ShelfNumber;
+        }
 
     }
 }
