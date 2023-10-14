@@ -8,15 +8,15 @@ namespace Lab
 {
     class Reader
     {
-        public uint Id;
+        public uint Id { get; set; }
 
-        public string FullName;
+        public string FullName { get; set; }
 
-        public uint ReaderTicket;
+        public uint ReaderTicket { get; set; }
 
-        public Dictionary<uint, DateTime> DateCapture;
+        public Dictionary<uint, DateTime> DateCapture { get; set; }
 
-        public Dictionary<uint, DateTime> DateReturn;
+        public Dictionary<uint, DateTime> DateReturn { get; set; }
         public string ToString()
         {
             return Id + FullName + ReaderTicket + DateCapture.ToList()[0] + DateReturn;

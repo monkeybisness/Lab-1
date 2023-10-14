@@ -8,17 +8,17 @@ namespace Lab
 {
     public class Book
     {
-        public uint Id;
+        public uint Id { get; set; }
 
-        public string Author;
+        public string Author { get; set; }
 
-        public string Title;
+        public string Title { get; set; }
 
-        public uint PublicationYear;
+        public uint PublicationYear { get; set; }
 
-        public uint CabinetNumber;
+        public uint CabinetNumber { get; set; }
 
-        public uint ShelfNumber;
+        public uint ShelfNumber { get; set; }
 
         public string ToString()
         {
