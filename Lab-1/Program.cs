@@ -4,8 +4,6 @@ namespace Lab
 {
     class Program
     {
-        CultureInfo cultureInfo = new CultureInfo("ru-RU", false);
-
         public static void Main(string[] args)
         {
             List<Reader> readers = new List<Reader>
