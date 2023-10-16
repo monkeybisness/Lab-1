@@ -19,7 +19,7 @@ namespace Lab
         public Dictionary<uint, DateTime> DateReturn { get; set; }
         public string ToString()
         {
-            return Id + FullName + ReaderTicket;
+            return Id + FullName + ReaderTicket + DateCapture.ToList()[0];
         }
     }
 }
